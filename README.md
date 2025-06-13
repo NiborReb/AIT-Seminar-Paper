@@ -1,0 +1,1 @@
+In the folder my-paper there is a file called my_paper. This is my work. Additionaly I added the my_library.bib file for the bibliography. Further I made some changes in the overlaying class to get rid of the copyright stuff from the original sample (sample-sigconf.tex).

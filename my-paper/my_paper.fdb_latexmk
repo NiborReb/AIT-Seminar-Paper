@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex my_paper"] 0 "my_paper.aux" "my_paper.bbl" "my_paper" 1749809523.02968 -1
+["bibtex my_paper"] 1749820466.06107 "my_paper.aux" "my_paper.bbl" "my_paper" 1749820650.28093 0
   "./ACM-Reference-Format.bst" 1749718793.89441 93560 12e0ced1522ea2bfa9b2fb12855c7e9e ""
-  "./my_library.bib" 1749806803.9156 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "my_paper.aux" 1749809522.42976 649 191e4111e88025053b83a76d73c5331b "pdflatex"
+  "./my_library.bib" 1749810794.80953 63 7a2a6655c4aa235e7d2dcd0de79ab854 ""
+  "my_paper.aux" 1749820649.5031 1160 87cf4151bb5fb478888cc8c0eb2d4f2a "pdflatex"
   (generated)
   "my_paper.bbl"
   "my_paper.blg"
   (rewritten before read)
-["pdflatex"] 1749809520.85033 "/home/sexgott/Documents/AIT-Seminar-Paper/my-paper/my_paper.tex" "my_paper.pdf" "my_paper" 1749809523.02991 0
-  "/home/sexgott/Documents/AIT-Seminar-Paper/my-paper/my_paper.tex" 1749809520.5687 681 34d97e7aa7ed015eb22ee79b9095348b ""
+["pdflatex"] 1749820646.92997 "/home/sexgott/Documents/AIT-Seminar-Paper/my-paper/my_paper.tex" "my_paper.pdf" "my_paper" 1749820650.28118 0
+  "/home/sexgott/Documents/AIT-Seminar-Paper/my-paper/my_paper.tex" 1749820463.60908 830 cae500170a8f4e41bbfa5e2788ff24ea ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc" 1490131464 2921 8ca0eb0831f9bc5da080d3697cfe67bf ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc" 1490131464 2933 9ad527ce78d7c5fa0a642dead095f172 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc" 1490131464 2934 a4a9158faed2e9e89c771b4e3b7fc12f ""
@@ -168,11 +168,11 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1749720472 5523539 cbe340ff87ac4cfddcdc6361a84e52ac ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1749720779 3599571 622d89da8dd56c7be14bb511d376754e ""
   "/usr/local/texlive/2025/texmf.cnf" 1749720463.5426 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "acmart.cls" 1749809365.08797 121722 dc5a1f9dc3920c2af39b22044026889c ""
-  "my_paper.aux" 1749809522.42976 649 191e4111e88025053b83a76d73c5331b "pdflatex"
-  "my_paper.bbl" 1749809322.1067 0 d41d8cd98f00b204e9800998ecf8427e "bibtex my_paper"
-  "my_paper.out" 1749809522.43076 200 610cc6b9652203b46dd83ec3a4fd2400 "pdflatex"
-  "my_paper.tex" 1749809520.5687 681 34d97e7aa7ed015eb22ee79b9095348b ""
+  "acmart.cls" 1749820646.475 121725 25bab7c8d57f510dfe88b5de25ab6ad0 ""
+  "my_paper.aux" 1749820649.5031 1160 87cf4151bb5fb478888cc8c0eb2d4f2a "pdflatex"
+  "my_paper.bbl" 1749820466.50717 1712 4d28b6ea748d03d80535fe94a7371ddb "bibtex my_paper"
+  "my_paper.out" 1749820649.5041 552 322e8425f606490e9c94e920f34de495 "pdflatex"
+  "my_paper.tex" 1749820463.60908 830 cae500170a8f4e41bbfa5e2788ff24ea ""
   (generated)
   "my_paper.aux"
   "my_paper.log"

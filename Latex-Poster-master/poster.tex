@@ -1,0 +1,236 @@
+% !TEX program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !TEX spellcheck = de_DE
+
+% --------------------------------------------------------------------------- %
+% Poster template for Institute of Telematics.      						  %
+% --------------------------------------------------------------------------- %
+% Created with Brian Amberg's LaTeX Poster Template. Please refer for the     %
+% attached README.md file for the details how to compile.				      %
+% --------------------------------------------------------------------------- %
+% $LastChangedDate:: 2017-08-03 18:00:00 +0200 (V, 12 szept. 2017)          $ %
+% $LastChangedRevision:: 129                                                $ %
+% $LastChangedBy:: allner                                                   $ %
+% $Id:: poster.tex 128 2011-09-11 08:57:12Z rlegendi                        $ %
+% --------------------------------------------------------------------------- %
+
+
+\documentclass[a0paper,portrait]{baposter}
+
+\usepackage[utf8]{inputenc}
+\usepackage{relsize}		% For \smaller
+\usepackage{url}			% For \url
+\usepackage{epstopdf}	% Included EPS files automatically converted to PDF to include with pdflatex
+\usepackage{verbatimbox}
+\usepackage{enumitem}
+\usepackage{wrapfig}
+\usepackage{natbib}
+\usepackage{setspace}
+\usepackage{uzlcolor}
+\usepackage[ngerman]{babel}
+\usepackage{blindtext}
+
+
+
+%%% Myriad Pro Font - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fontspec}
+\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+\setmonofont{Myriad Pro}
+\setmainfont[
+BoldFont={Myriad Pro}, 
+ItalicFont={Myriad Pro},
+BoldItalicFont={Myriad Pro}
+]{Myriad Pro}
+\setsansfont{Myriad Pro}
+
+
+
+%%% Global Settings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\graphicspath{{pix/}}	% Root directory of the pictures 
+\tracingstats=2			% Enabled LaTeX logging with conditionals
+
+\newcommand{\localtextbulletone}{\textcolor{uzl_orange_2}{\raisebox{0.2ex}{\rule{1.2ex}{1.2ex}}}}
+\renewcommand{\labelitemi}{\localtextbulletone}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Utility functions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Save space in lists. Use this after the opening of the list %%%%%%%%%%%%%%%%
+\newcommand{\compresslist}{
+	\setlength{\itemsep}{1pt}
+	\setlength{\parskip}{0pt}
+	\setlength{\parsep}{0pt}
+}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Document Start %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\input{verbatims}
+
+\typeout{Poster rendering started}
+
+%%% Setting Background Image %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\background{
+% 	\begin{tikzpicture}[remember picture,overlay]%
+% 	\draw (current page.north west)+(-2em,2em) node[anchor=north west]
+% 	{\includegraphics[height=1.1\textheight]{background}};
+% 	\end{tikzpicture}
+}
+
+%%% General Poster Settings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% Eye Catcher, Title, Authors and University Images %%%%%%%%%%%%%%%%%%%%%%
+\begin{poster}{
+	grid=false,
+	% Option is left on true though the eyecatcher is not used. The reason is
+	% that we have a bit nicer looking title and author formatting in the headercol
+	% this way
+	eyecatcher=false, 
+	borderColor=uzl_oceangreen_80,
+	headerColorOne=uzl_oceangreen_80,
+	headerColorTwo=uzl_oceangreen_80,
+	headerFontColor=white,
+	% Only simple background color used, no shading, so boxColorTwo isn't necessary
+	boxColorOne=white,
+	% rectangle small-rounded roundedright roundedleft rounded
+	headershape=rectangle,
+	headerfont=\large\bf,
+	% none bars coils triangles rectangle rounded faded
+	textborder=roundedsmall,
+	background=plain,
+	bgColorOne=white,
+	% none closed open
+	headerborder=open,
+	% plain shade-lr shade-tb none
+	boxshade=plain,
+	%Number of columns (default 4 in landscape and 3 in portrait format) (maximumnumber is 6)
+	%colspacing=length
+	columns=5,
+	linewidth=1pt,
+	% plain shade-lr shade-tb shade-tb-inverse
+	headershade=plain
+}
+%%% Eye Cacther %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+%  \includegraphics[height=5em]{qrcode}
+%  \hspace{0.7cm}
+}
+%%% Title %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+	\vspace{0.3cm}
+  \textcolor{uzl_oceangreen_80}{\textbf{Beispiel Titel}}
+    \vspace{0.3cm}
+}
+%%% Subtitle %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+  \textcolor{uzl_orange_2}{\textsf{Beispiel Untertitel}}
+}
+%%% Logo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+  \hspace{1cm}
+  \includegraphics[height=8em]{Logo_Inst_Telematik_orig}
+}
+
+%%% Header %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{}{name=headtext, column=0, span=5, textborder=none, headerborder=none, boxheaderheight=0pt, boxColorOne=uzl_oceangreen_80}{
+  \vspace{0.10cm}
+    \textcolor{white}{\textsf{\large{Max Mustermann  \hfill - \hfill Universität zu Lübeck \hfill - \hfill Institut für Telematik \hfill - \hfill Email: mustermann@itm.uni-luebeck.de}}}
+  \vspace{0.10cm}
+}
+
+
+%%% I. Abschnitt %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{I. Abschnitt}{name=abschnitt1, column=0, span=3, row=0, below=headtext}{
+	\vspace{0.5em}
+	Lorem ipsum dolor sit amet, \textbf{consetetur} sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. \cite{einstein}
+	\begin{itemize}[leftmargin=5.5mm, rightmargin=5.5mm]
+		\item Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+		\item Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+		\item Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+		\item Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+		\item Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+	\end{itemize}
+	\vspace{0.5em}
+}
+
+%%% II. Abschnitt %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{\textsf{II. Abschnitt}}{name=abschnitt2,column=0, span=3, below=abschnitt1}{
+	\vspace{0.5em}
+	\begin{itemize}[leftmargin=5.5mm, rightmargin=5.5mm]
+		\item Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore \cite{latexcompanion}
+		\item Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+		\item Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+		\item Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+		\item Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+	\end{itemize}
+	\vspace{0.5em}
+}
+
+
+%%% III. Abschnitt %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{\textsf{III. Abschnitt}}{name=abschnitt3, column=0, span=3, below=abschnitt2}{
+
+
+\vspace{0.5em}
+	\begin{itemize}[leftmargin=5.5mm, rightmargin=5.5mm]
+		\item \blindtext \cite{knuthwebsite}
+	\end{itemize}
+		\vspace{0.5em}
+}
+
+%%% IV. Abschnitt %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{\textsf{IV. Abschnitt}}{name=abschnitt4, column=0, span=3, below=abschnitt3}{
+	
+	\vspace{0.5em}
+	\blindtext
+	\vspace{0.5em}
+}
+
+
+%%% Bild 1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{\textsf{Bild}}{name=bild1, column=3, span=2, below=headtext}{
+\vspace{10cm}
+\centering
+
+}
+
+
+
+
+
+
+%%% Bild 2 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{\textsf{Bild 2}}{name=bild2,column=3, span=2, below=bild1}{
+	\vspace{10cm}
+	\centering
+
+}
+
+
+
+%%% Bild 3 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{\textsf{Bild 3}}{name=bild3, column=3, span=2, below=bild2, above=bottom}{
+	\vspace{10cm}
+\centering
+
+
+}
+
+
+%%% References %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{\textsf{Quellen}}{name=references, column=0, span=3, above=bottom, below=abschnitt4}{
+  \begin{small}
+  \renewcommand{\refname}{\vspace{-0.8em}}
+  \setlength{\parskip}{0cm}
+  \setlength{\bibsep}{0cm}
+  \bibliographystyle{unsrt}
+  \bibliography{references}
+  \end{small}
+}
+
+\end{poster}
+
+\end{document}

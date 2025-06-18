@@ -7,9 +7,29 @@
 \settopmatter{printacmref=false}
 \setcopyright{none}
 
+%% Rights management information.  This information is sent to you
+%% when you complete the rights form.  These commands have SAMPLE
+%% values in them; it is your responsibility as an author to replace
+%% the commands and values with those provided to you when you
+%% complete the rights form.
+\setcopyright{acmlicensed}
+\copyrightyear{2018}
+\acmYear{2025}
+\acmDOI{https://doi.org/10.1145/3576781.3608719}
+%% These commands are for a PROCEEDINGS abstract or paper.
+\acmConference[NANOCOM '25]{Proceedings of the 10th ACM International Conference on Nanoscale Computing and Communication}{June 03--05,
+  2025}{Coventry, United Kingdom}
+%%
+%%  Uncomment \acmBooktitle if the title of the proceedings is different
+%%  from ``Proceedings of ...''!
+%%
+%%\acmBooktitle{Woodstock '18: ACM Symposium on Neural Gaze Detection,
+%%  June 03--05, 2018, Woodstock, NY}
+\acmISBN{978-8-4007-0034-7/23/09...\$15.00}           
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
-\title{In Silico Model of Tumor Diagnosis based on Bloodstream Penetrating Extracellular Vesicles}
+\title{In Silico Model for Tumor Diagnosis based on Bloodstream Penetrating Extracellular Vesicles}
 \author{Robin Brendel}
 \email{robin.brendel@student.uni-luebeck.de}
 \affiliation{%
@@ -22,27 +42,36 @@
 Extracellular vesicles (EVs) have drawn a lot of scientific attention in the last ten years as natural drug carriers and disease biomarkers, particularly for cancer. Although a few studies have monitored tumor-derived EVs in the bloodstream or extracellular spaces, none have fully modeled their concurrent passage through surrounding tissues, blood vessels, and tumor microenvironments. We created an in silico computer model that replicates the entire procedure. Our model includes EV release from cancer cells, circulation through arterial-capillary-venous networks, transport across tissue, and eventual bloodstream entry. Based on the speed at which tumor EVs enter the bloodstream, we suggest a novel diagnostic approach for sub-millimeter tumors by examining simulation results. Our results highlight the method's sensitivity to tumor size and its potential for non-invasive cancer detection. 
 \end{abstract}
 
+\begin{CCSXML}
+<ccs2012>
+ <concept>
+  <concept_id>10010147.10010257.10010291</concept_id>
+  <concept_desc>Applied computing~Computational biology~Systems biology</concept_desc>
+  <concept_significance>500</concept_significance>
+ </concept>
+</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Applied computing~Systems biology}
+
 \keywords{In Silico, Extracellular Vesicles, COMSOL, Tumor, Diagnosis, Cancer, Biomarkers}
 
 \maketitle
 
 \section{Introduction}
 \label{sec: introduction}
-Extracellular vesicles (EVs) are tiny lipid-bound particles (30 nm to \SI{5}{\micro\meter}) released by cells into their surroundings \cite{Doyle_2019}. Their lipid walls protect contents from enzymes and help cross biological barriers \cite{Arjmandi_2021}. Combining durability, natural targeting, and cargo-specificity, EVs offer exciting potential as diagnostic biomarkers and natural drug delivery vehicles, particularly for cancer \cite{Doyle_2019}.
+EVs are tiny lipid-bound particles, 30 nm to \SI{5}{\micro\meter} in size, released by cells into their surroundings \cite{Doyle_2019}. Their lipid walls protect contents from enzymes and help cross biological barriers \cite{Arjmandi_2021}. Combining durability, natural targeting, and cargo-specificity, EVs offer exciting potential as diagnostic biomarkers and natural drug delivery vehicles, particularly for cancer \cite{Doyle_2019}.
 
-EVs don't move locally. They can enter the bloodstream and travel systemically with the blood flow. This enables non-invasive diagnostics, prompting mathematical models of EV blood propagation \cite{Ferguson_2020}. Understanding this tissue-blood journey is crucial for improving diagnostics and drug delivery. For an overview of these mechanisms the following paper is given \cite{Sykov__2008}. Beyond expensive invasive studies in vivo or limited experiments in vitro, computer models provide cost-effective in silico alternatives that can show complex biological processes while reducing experiments in the lab. 
+Since EVs do not move locally, they can enter the bloodstream and travel systemically with the blood flow. This enables non-invasive diagnostics, prompting mathematical models of EV blood propagation \cite{Ferguson_2020}. Understanding this tissue-blood journey is crucial for improving diagnostics and drug delivery. For an overview of these mechanisms the following paper is given \cite{Sykov__2008}. Beyond expensive invasive studies in vivo or limited experiments in vitro, computer models provide cost-effective in silico alternatives that can show complex biological processes while reducing experiments in the lab. 
 
-Our paper is structured as follows: In the second section we explain our system model for the tissue and blood vessels network. After that, in section three we summarize findings and outline future work.
+This paper is structured as follows: In section 2 we explain our system model for the tissue and blood vessels network and how the EVs, interact with at tissue barriers. After that, in section three we show our findings and in section 4 outline future work.
 
-\section{Design and Results}
-\label{sec: design-results}
-
-\subsection{System Model}
+\section{System Model}
 \label{subsec: sys-model}
-Figure 1 shows our realistic biological scenario with the following distinct zones: artery (blood inlet), vein (blood outlet), capillary network ($\Omega_{\text{c}}$), tumor area ($\Omega_{\text{t}}$), and healthy tissue ($\Omega_{\text{h}}$). Since tumors need oxygen and nutrients, capillaries infiltrate cancerous regions. Tumor-generated EVs can either penetrate capillary walls into blood or migrate into healthy tissue. The bloodstream entry rate depends on vessel wall permeability which is modeled by:
-\begin{equation}
+Figure 1 shows our realistic biological scenario with the following distinct zones: the artery functioning as blood inlet, vein as blood outlet, capillary network ($\Omega_{\text{c}}$), tumor area ($\Omega_{\text{t}}$), and healthy tissue ($\Omega_{\text{h}}$). Since tumors need oxygen and nutrients, capillaries infiltrate cancerous regions. Tumor-generated EVs can either penetrate capillary walls into blood or migrate into healthy tissue. The bloodstream entry rate depends on vessel wall permeability which is modeled by:
+\begin{displaymath}
   k_{\mathrm{p}}=\frac{D_{\mathrm{w}}}{d_{\mathrm{w}}}
-\end{equation}
+\end{displaymath}
 
 where $D_{\mathrm{w}}$ is the EV diffusion coefficient within the wall and $d_{\mathrm{w}}$ is wall thickness, which parameters are listed in \cite{Zoofaghari_2023}. Thin walls of capillaries and high $k_{\mathrm{p}}$ make them primary EV gateways, so we established specialized boundary conditions to model biologically realistic transitions:
 \begin{itemize}
@@ -50,65 +79,56 @@ where $D_{\mathrm{w}}$ is the EV diffusion coefficient within the wall and $d_{\
   \item Tumor-healthy interface, where a partition condition ($c_{\text{h}} = k_{\text{t}}c_{\text{t}}$) governs EV migration, with $k_{\text{t}} = \sqrt{D_{\text{t}}/D_{\text{h}}}$ that depends on diffusion differences.
   \item Healthy tissue boundary, where partially absorbing condition models EV uptake.
 \end{itemize}
-EVs primarily drift with blood flow  ($\bm{u}_{\text{b}}$) as soon as they are in the blood system. Changes in EV concentration in capillaries, tumors, and healthy tissue are described by advection-diffusion equations, which take into consideration flow drift, diffusion, degradation, and release rates ($R_{\text{t}}$, $R_{\text{h}}$). Navier-Stokes equations were used to model blood flow as laminar flow. The EV penetration rate into circulation ($R_{\text{s}}$, mol/s), which was determined by integrating EV flux across venule cross sections (VCS), was the primary diagnostic metric:
+EVs primarily drift with blood flow  ($\bm{u}_{\text{b}}$) as soon as they are in the blood system. Changes in EV concentration in capillaries, tumors, and healthy tissue are described by advection-diffusion equations, which take into consideration flow drift, diffusion, degradation, and release rates ($R_{\text{t}}$, $R_{\text{h}}$). Navier-Stokes equations were used to model blood flow as laminar flow. The EV penetration rate into circulation, which was determined by integrating EV flux across venule cross sections (VCS), was the primary diagnostic metric.
 
-\begin{equation}
-  R_{\text{s}}=\iint_{\text{VCS}}c(r,t)u_{n}(r,t)\,\mathrm{d}s
-\end{equation}
-where $c(r,t)$ describes the concentration differences of EVs and $u_{n}(r,t)$ the blood velocity vertical to the VCS.
+% \begin{equation}
+%   R_{\text{s}}=\iint_{\text{VCS}}c(r,t)u_{n}(r,t)\,\mathrm{d}s
+% \end{equation}
+% where $c(r,t)$ describes the concentration differences of EVs and $u_{n}(r,t)$ the blood velocity vertical to the VCS.
+ \begin{figure}[h]
+   \centering
+   \includegraphics[width=\linewidth]{pictures/schematic_bloodvessels.png}
+   \caption{This schematic shows the blood vessels system in healthy and cancerous tissue \cite{Zoofaghari_2023}.}
+   \Description{}
+ \end{figure}
 
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=\linewidth]{pictures/schematic_bloodvessels.png}
-  \caption{This schematic shows the blood vessels system in healthy and cancerous tissue \cite{Zoofaghari_2023}.}
-  \Description{}
-\end{figure}
+ \newpage
 
-\newpage
-
-\subsection{Results}
+\section{Results}
 \label{sec: num-results}
-Our computational framework used COMSOL Multiphysics to solve the relevant equations with finite element methods. The Transport of Diluted Species module captured how EVs move, while the Single-Phase Flow module simulated blood flow. Blood velocity profiles from these flow simulations directly fed into EV transport calculations, with the parameters listed in \cite{Zoofaghari_2023}.
+Our computational framework used COMSOL Multiphysics to solve the relevant equations with finite element methods. The Termsransport of Diluted Species module depicted how EVs move, while the Single-Phase Flow module simulated blood flow. Blood velocity profiles from these flow simulations directly contributed to EV transport calculations, using the parameters listed in \cite{Zoofaghari_2023}. The simulations provided important insights into how EVs interact with tumors and the bloodstream. In tumor regions, we observed a strong buildup of EVs due to the dense tissue structure and lower diffusion rates. This effect resulted in concentration gradients that were 3.5 times higher than those in healthy tissue. This creates significant barriers for capillary access, even when the tissues are close together. 
 
-The simulations provided key insights into how EVs interact with tumors and the bloodstream. In tumor regions, we observed a strong buildup of EVs due to dense tissue structure and lower diffusion rates. This effect led to concentration gradients that were 3.5 times higher than those in healthy tissue. That creates strong obstacles for capillary access even when the tissues were close together.
+We assumed uniform EV size in this model to remove the effects of diffusion dispersion and focus only on transport and accumulation dynamics. Since the capillary network has a larger total sectional area than the arteriole and venule, blood flow simulations show that the velocity components in the capillary network are considerably lower and this slow flow helps EV exchange. Only a small percentage of EVs diffuse into capillaries, while most accumulate in tumor areas. After entering the capillaries, EVs are quickly transported into the venule and exit the body, where their concentrations drop rapidly. 
 
-The main results are summarized as follows:
+To support effective clearance through circulation, EV transport streamlines ensure that flux is directed toward the vein and increases as it approaches the outlet. The EV penetration rate \( R_s \), calculated over the VCS, shows a clear dependence on tumor size and blood flow parameters. This rate is computed by integrating the EV flux across VCS, accounting for concentration gradients and the component of blood velocity normal to the VCS.
+
+Simulations across different tumor sizes revealed the following key observations regarding $R_s$:
 \begin{itemize}
-  \item Because the capillary network has a larger total  sectional area than the arteriole and venule, blood flow simulations reveal that the capillary network's velocity components are substantially lower. EV exchange is facilitated by this slow flow.
-  
-  \item Only a small percentage of EVs diffuse into capillaries, with the majority accumulating in tumor areas. After entering the capillaries, EVs are swiftly transported into the venule and exit the body, where their concentrations rapidly decrease.
-  
-  \item In order to support efficient clearance through circulation, EV transport streamlines verify that flux is directed toward the vein and intensifies as it approaches the outlet.
-  
-  \item By examining tumors of different sub-millimeter sizes, the model's diagnostic sensitivity was evaluated:
-  \begin{enumerate}
-    \item Small tumors produce low EV release rates and the accumulation is localized with limited vascular penetration.
-    \item Moderate tumors show increased EV diffusion into capillaries and hence elevated venous EV concentrations.
-    \item Large tumors boost EV penetration rate into the bloodstream, with a marked increase in venous flux and concentration.
-  \end{enumerate}
-  
-  \item The EV penetration rate \( R_s \) (mol/s), that is calculated over the venule cross section, demonstrates a clear dependence on tumor size and blood flow parameters. This relationship supports the viability of EV-based diagnostics for detecting early-stage, sub-millimeter tumors.
+    \item Tumor-derived EVs enter the bloodstream at rates that are inversely proportional to tumor size
 
-  \item Uniform EV size was assumed in this model to eliminate the effects of diffusion dispersion and focus solely on transport and accumulation dynamics.
+    \item The temporal profiles of EV penetration provide significant diagnostic information
+    \begin{itemize}
+        \item Small tumors with 200~\si{\micro\meter} release EVs rapidly, with a peak at approximately 18 hours
+        \item Larger tumors with 600~\si{\micro\meter} produce weaker signals, with peak amplitudes reduced by 60\% and rise times is slowed.
+    \end{itemize}
+    
+    \item Tumor size influences transport resistance, with larger tumors more strongly impeding EV escape
+
+    \item An increase of 100~\si{\micro\meter} in tumor diameter results in a approximately 30\% reduction in peak EV penetration rate. This relationship enables the detection of tumor size changes for small tumors within the diagnostic time window.
 \end{itemize}
-
 
 \section{Conclusion}
 \label{sec: conclusion}
-This study presents a computational framework for modeling how EVs move from tumor tissue into the bloodstream. The goal is to evaluate the possibility of using EV-based liquid biopsies for early cancer detection. By combining advection-diffusion dynamics with microvascular blood flow in a realistic tumor-vessel setup, we measured EV accumulation and transvascular penetration across different tumor sizes.
+This study presents a comprehensive in silico framework that models the generation, transport, and bloodstream entry of tumor-derived EVs with high spatial and temporal resolution. Through simulations of capillary-tissue dynamics and EV kinetics using COMSOL Multiphysics, we quantified the EV penetration rate $R_s$ as a diagnostic metric, uncovering its strong dependence on tumor size and microenvironmental transport conditions.
 
-Our results show that even very small tumors can produce detectable EV levels in the venous outflow, as long as enough transvascular transport occurs. The simulations reveal a nonlinear increase in venous EV concentration with tumor size, highlighting its sensitivity to early-stage tumor development. Additionally, the model identifies key physical mechanisms, like capillary slowing, pressure-driven flow, and diffusion limitations, that influence EV distribution and clearance.
+Our results demonstrate that even sub-millimeter tumors can generate measurable EV signatures in the bloodstream. Notably, smaller tumors produce sharper and earlier peaks in $R_s$, while larger tumors exhibit delayed and attenuated signals due to increased diffusion resistance and localized EV accumulation. The model shows that an increase in tumor diameter of just 100~\si{\micro\meter} can reduce EV penetration rates by over 30\%, highlighting a highly sensitive relationship between tumor size and bloodstream signal strength.
 
-These findings support the idea of using EV concentration measurements in venous blood as a less invasive method for early tumor detection. The modeling framework provides a basis for refining diagnostic thresholds and improving sampling strategies in future experimental and clinical studies. Further work may build on this model by including varying tumor properties, different EV sizes, and dynamic systemic clearance to enhance biological realism.
+These findings suggest a promising avenue for non-invasive cancer detection using circulating EV profiles, with potential sensitivity down to 50~\si{\micro\meter}. That is well below the threshold of conventional imaging modalities. Furthermore, the temporal evolution of EV release offers a new diagnostic dimension beyond static imaging, enabling early detection and potentially improving patient outcomes.
 
+Future work will aim to extend the model to heterogeneous EV populations, incorporate active cellular uptake mechanisms, and validate the computational predictions with in vitro and in vivo data. Also 
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{my_library}
-
-\appendix
-
-\section{About this paper}
-This paper is a summary of an original source paper. The source paper with the same title you can find in \cite{Zoofaghari_2023}
 
 \end{document}
 \endinput

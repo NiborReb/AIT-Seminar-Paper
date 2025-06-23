@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex my_paper"] 1750668355.35653 "my_paper.aux" "my_paper.bbl" "my_paper" 1750668358.47332 0
+["bibtex my_paper"] 1750671908.46577 "my_paper.aux" "my_paper.bbl" "my_paper" 1750673017.88028 0
   "./ACM-Reference-Format.bst" 1749718793.89441 93560 12e0ced1522ea2bfa9b2fb12855c7e9e ""
-  "./my_library.bib" 1750076032.13956 2505 946bcf38613b5be917ed19a42552702f ""
-  "my_paper.aux" 1750668357.85085 2158 fff2053a796eb7014b92d41954dab033 "pdflatex"
+  "./my_library.bib" 1750671883.86581 3039 b326a10664d3fdbbc3eeed83398ff1d2 ""
+  "my_paper.aux" 1750673017.234 2247 fd7e470c5098018a0e2b569924e8bea7 "pdflatex"
   (generated)
   "my_paper.bbl"
   "my_paper.blg"
   (rewritten before read)
-["pdflatex"] 1750668355.60302 "/home/sexgott/Documents/AIT-Seminar-Paper/my-paper/my_paper.tex" "my_paper.pdf" "my_paper" 1750668358.47353 0
-  "/home/sexgott/Documents/AIT-Seminar-Paper/my-paper/my_paper.tex" 1750668352.04164 11999 c4563ac1fb394fbf2c54fbd2789ca73e ""
+["pdflatex"] 1750673015.39214 "/home/sexgott/Documents/AIT-Seminar-Paper/my-paper/my_paper.tex" "my_paper.pdf" "my_paper" 1750673017.88055 0
+  "/home/sexgott/Documents/AIT-Seminar-Paper/my-paper/my_paper.tex" 1750673015.10793 11873 f8a27af290cb36875332a14614e46def ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc" 1490131464 2921 8ca0eb0831f9bc5da080d3697cfe67bf ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc" 1490131464 2933 9ad527ce78d7c5fa0a642dead095f172 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc" 1490131464 2934 a4a9158faed2e9e89c771b4e3b7fc12f ""
@@ -220,10 +220,10 @@
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1749720779 3599571 622d89da8dd56c7be14bb511d376754e ""
   "/usr/local/texlive/2025/texmf.cnf" 1749720463.5426 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
   "acmart.cls" 1750235276.3637 121725 55c82b1c8415ebc97f8e984a7d310e9c ""
-  "my_paper.aux" 1750668357.85085 2158 fff2053a796eb7014b92d41954dab033 "pdflatex"
-  "my_paper.bbl" 1750668355.58977 4947 0fdec4d24b86787ea348d1a0866f38ad "bibtex my_paper"
-  "my_paper.out" 1750668357.85085 610 995bb00a83cb1f41c91a58e0ac93cc84 "pdflatex"
-  "my_paper.tex" 1750668352.04164 11999 c4563ac1fb394fbf2c54fbd2789ca73e ""
+  "my_paper.aux" 1750673017.234 2247 fd7e470c5098018a0e2b569924e8bea7 "pdflatex"
+  "my_paper.bbl" 1750671908.82966 5676 0b181a14e42d76191ddcafed72aa12ef "bibtex my_paper"
+  "my_paper.out" 1750673017.235 610 995bb00a83cb1f41c91a58e0ac93cc84 "pdflatex"
+  "my_paper.tex" 1750673015.10793 11873 f8a27af290cb36875332a14614e46def ""
   "pictures/schematic_bloodvessels.png" 1749980182.78308 135870 bbf2c9ca0238f6f32e866ea30fef3c52 ""
   (generated)
   "my_paper.aux"

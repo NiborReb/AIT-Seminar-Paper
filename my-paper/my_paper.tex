@@ -29,7 +29,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
-\title{In Silico Model for Tumor Diagnosis based on Bloodstream Penetrating Extracellular Vesicles}
+\title{In Silico Model for Tumor Diagnosis Based on Bloodstream Penetrating Extracellular Vesicles}
 \author{Robin Brendel}
 \email{robin.brendel@student.uni-luebeck.de}
 \affiliation{%
@@ -76,10 +76,10 @@ Figure 1 shows our realistic biological scenario with the following distinct zon
 where $D_{\mathrm{w}}$ is the EV diffusion coefficient within the wall and $d_{\mathrm{w}}$ is wall thickness, which parameters are listed in \cite{Zoofaghari_2023}. Thin walls of capillaries and high $k_{\mathrm{p}}$ make them primary EV gateways, so we established specialized boundary conditions to model biologically realistic transitions:
 \begin{itemize}
   \item Capillary-tissue interface, where a diffusion barrier connects EV flow between tissue ($J_{\text{t}}$/$J_{\text{h}}$) and blood ($J_{\text{c}}$) to concentration differences ($c_{\text{t}}$/$c_{\text{h}}$ vs. $c_{\text{c}}$). According to diffusion principles, EVs flow from regions of higher to lower concentration.
-  \item Tumor-healthy interface, where a partition condition ($c_{\text{h}} = k_{\text{t}}c_{\text{t}}$) governs EV migration, with $k_{\text{t}} = \sqrt{D_{\text{t}}/D_{\text{h}}}$ that depends on diffusion differences.
+  \item Tumor-healthy interface, where a partition condition ($c_{\text{h}} = k_{\text{t}}c_{\text{t}}$) governs EV migration, with $k_{\text{t}} = \sqrt{D_{\text{t}}/D_{\text{h}}}$ that depends on diffusion differences. The model acknowledges that tumor cells may release more EVs in comparison to healthy cells. Further, tumor tissue can have increased permeability.
   \item Healthy tissue boundary, where partially absorbing condition models EV uptake.
 \end{itemize}
-EVs primarily drift with blood flow  ($\bm{u}_{\text{b}}$) as soon as they are in the blood system. Changes in EV concentration in capillaries, tumors, and healthy tissue are described by advection-diffusion equations, which take into consideration flow drift, diffusion, degradation, and release rates ($R_{\text{t}}$, $R_{\text{h}}$). Navier-Stokes equations were used to model blood flow as laminar flow. The EV penetration rate into circulation, which was determined by integrating EV flux across venule cross sections (VCS), was the primary diagnostic metric.
+EVs primarily drift with blood flow  ($\bm{u}_{\text{b}}$) as soon as they are in the blood system. Changes in EV concentration in capillaries, tumors, and healthy tissue are described by advection-diffusion equations, which take into consideration flow drift, diffusion, degradation, and release rates ($R_{\text{t}}$, $R_{\text{h}}$). Navier-Stokes equations were used to model blood flow as laminar, incompressible flow. The EV penetration rate into circulation, which was determined by integrating EV flux across venule cross sections (VCS), was the primary diagnostic metric. Within the bloodstream, EVs are transported by convection and diffusion. Once EVs, enter the tissue, their movement is modeled by diffusion and degradation processes.
 
 % \begin{equation}
 %   R_{\text{s}}=\iint_{\text{VCS}}c(r,t)u_{n}(r,t)\,\mathrm{d}s
@@ -88,11 +88,10 @@ EVs primarily drift with blood flow  ($\bm{u}_{\text{b}}$) as soon as they are i
  \begin{figure}[h]
    \centering
    \includegraphics[width=\linewidth]{pictures/schematic_bloodvessels.png}
-   \caption{This schematic shows the blood vessels system in healthy and cancerous tissue \cite{Zoofaghari_2023}.}
+   \caption{This schematic shows the blood vessels system in healthy and cancerous tissue \cite{Zoofaghari_2023}. This shows the distinct areas used in the system model for the EVs flow modeling.}
    \Description{}
  \end{figure}
 
- \newpage
 
 \section{Results}
 \label{sec: num-results}

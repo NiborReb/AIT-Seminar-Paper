@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.6.24)  25 JUN 2025 11:34
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.6.24)  26 JUN 2025 16:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/sexgott/Documents/AIT-Seminar-Paper/Latex-Poster-master/poster
-(/home/sexgott/Documents/AIT-Seminar-Paper/Latex-Poster-master/poster.tex
+**/home/sexgott/Documents/AIT-Seminar-Paper/my-poster/Latex-Poster-master/poster
+(/home/sexgott/Documents/AIT-Seminar-Paper/my-poster/Latex-Poster-master/poster.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (./baposter.cls
@@ -787,28 +787,28 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (./verbatims.tex
 \observewithouteidcontent=\box74
 LaTeX Font Info:    Font shape `TU/MyriadPro(0)/m/n' will be
-(Font)              scaled to size 8.90488pt on input line 2.
+(Font)              scaled to size 8.90488pt on input line 5.
 \observewitheidcontent=\box75
 \eidforclientcontent=\box76
 \servercontent=\box77
 )
 Poster rendering started
-LaTeX Font Info:    Font shape `TU/MyriadPro(2)/b/n' will be
-(Font)              scaled to size 8.90488pt on input line 136.
-LaTeX Font Info:    Font shape `TU/MyriadPro(2)/b/n' will be
-(Font)              scaled to size 22.15533pt on input line 136.
-LaTeX Font Info:    Font shape `TU/MyriadPro(2)/m/n' will be
-(Font)              scaled to size 12.82301pt on input line 136.
 File: pix/Logo_Inst_Telematik_orig.pdf Graphic file (type pdf)
 <use pix/Logo_Inst_Telematik_orig.pdf>
+LaTeX Font Info:    Font shape `TU/MyriadPro(2)/b/n' will be
+(Font)              scaled to size 8.90488pt on input line 135.
+LaTeX Font Info:    Font shape `TU/MyriadPro(2)/b/n' will be
+(Font)              scaled to size 22.15533pt on input line 135.
+LaTeX Font Info:    Font shape `TU/MyriadPro(2)/m/n' will be
+(Font)              scaled to size 12.82301pt on input line 135.
 LaTeX Font Info:    Font shape `TU/MyriadPro(1)/m/n' will be
-(Font)              scaled to size 6.23341pt on input line 136.
+(Font)              scaled to size 6.23341pt on input line 135.
 LaTeX Font Info:    Font shape `TU/MyriadPro(1)/m/n' will be
-(Font)              scaled to size 4.45244pt on input line 136.
+(Font)              scaled to size 4.45244pt on input line 135.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 136.
+(Font)              <7> on input line 135.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 136.
+(Font)              <5> on input line 135.
 LaTeX Font Info:    Font shape `TU/MyriadPro(2)/m/n' will be
 (Font)              scaled to size 10.68585pt on input line 142.
 Missing character: There is no ; ("3B) in font nullfont!
@@ -853,14 +853,14 @@ Missing character: There is no ; ("3B) in font nullfont!
 Missing character: There is no ; ("3B) in font nullfont!
 Missing character: There is no ; ("3B) in font nullfont!
 
-Overfull \hbox (1.64268pt too wide) in paragraph at lines 136--234
+Overfull \hbox (1.64268pt too wide) in paragraph at lines 135--234
 [][] [] 
  []
 
 [2
 
 ]
-Memory usage before: 46631&879876; after: 31916&879421; still untouched: 3035373
+Memory usage before: 46483&879933; after: 31844&879478; still untouched: 3035373
 
 Package natbib Warning: There were undefined citations.
 
@@ -872,11 +872,11 @@ L3 programming layer <2024-01-22>
  ) 
 Here is how much of TeX's memory you used:
  20296 strings out of 474878
- 466973 string characters out of 5762516
+ 467011 string characters out of 5762516
  1964627 words of memory out of 5000000
- 41955 multiletter control sequences out of 15000+600000
+ 41956 multiletter control sequences out of 15000+600000
  561227 words of font info for 58 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 117i,9n,122p,475b,1030s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,8n,122p,485b,1032s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on poster.pdf (1 page).

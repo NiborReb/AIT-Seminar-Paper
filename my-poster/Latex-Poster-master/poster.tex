@@ -1,6 +1,6 @@
 % !TEX program = xelatex
 % !TEX encoding = UTF-8 Unicode
-% !TEX spellcheck = en_us
+% !TEX spellcheck = de_DE
 
 % --------------------------------------------------------------------------- %
 % Poster template for Institute of Telematics.      						  %
@@ -114,30 +114,30 @@ BoldItalicFont={Myriad Pro}
 	headershade=plain
 }
 %%% Eye Cacther %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%{
-%  \includegraphics[height=5em]{penetration_rate.png}
-% \hspace{0.7cm}
-%}
+{
+%  \includegraphics[height=5em]{qrcode}
+%  \hspace{0.7cm}
+}
 %%% Title %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 {
 	\vspace{0.3cm}
-  \textcolor{uzl_oceangreen_80}{\textbf{In Silico Model of Tumor Diagnosis based on Bloodstream Penetrating Extracellular Vesicles}}
+  \textcolor{uzl_oceangreen_80}{\textbf{Beispiel Titel}}
     \vspace{0.3cm}
 }
 %%% Subtitle %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%{
-% \textcolor{uzl_orange_2}{\textsf{Beispiel Untertitel}}
-%}
+{
+  \textcolor{uzl_orange_2}{\textsf{Beispiel Untertitel}}
+}
 %%% Logo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 {
   \hspace{1cm}
-  \includegraphics[height=8em]{pix/Logo_Inst_Telematik_orig}
+  \includegraphics[height=8em]{Logo_Inst_Telematik_orig}
 }
 
 %%% Header %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headerbox{}{name=headtext, column=0, span=5, textborder=none, headerborder=none, boxheaderheight=0pt, boxColorOne=uzl_oceangreen_80}{
   \vspace{0.10cm}
-    \textcolor{white}{\textsf{\large{Robin Brendel  \hfill - \hfill Universität zu Lübeck \hfill - \hfill Institut für Telematik - \hfill Email: robin.brendel@student.uni-luebeck.de}}}
+    \textcolor{white}{\textsf{\large{Max Mustermann  \hfill - \hfill Universität zu Lübeck \hfill - \hfill Institut für Telematik \hfill - \hfill Email: mustermann@itm.uni-luebeck.de}}}
   \vspace{0.10cm}
 }
 
@@ -182,7 +182,7 @@ BoldItalicFont={Myriad Pro}
 }
 
 %%% IV. Abschnitt %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\headerbox{\textsf{Conclusion}}{name=abschnitt4, column=0, span=3, below=abschnitt3}{
+\headerbox{\textsf{IV. Abschnitt}}{name=abschnitt4, column=0, span=3, below=abschnitt3}{
 	
 	\vspace{0.5em}
 	\blindtext
@@ -191,15 +191,19 @@ BoldItalicFont={Myriad Pro}
 
 
 %%% Bild 1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\headerbox{\textsf{Figure 1}}{name=bild1, column=3, span=2, below=headtext}{
+\headerbox{\textsf{Bild}}{name=bild1, column=3, span=2, below=headtext}{
 \vspace{10cm}
 \centering
 
 }
 
 
+
+
+
+
 %%% Bild 2 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\headerbox{\textsf{Figure 2}}{name=bild2,column=3, span=2, below=bild1}{
+\headerbox{\textsf{Bild 2}}{name=bild2,column=3, span=2, below=bild1}{
 	\vspace{10cm}
 	\centering
 
@@ -208,15 +212,16 @@ BoldItalicFont={Myriad Pro}
 
 
 %%% Bild 3 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\headerbox{\textsf{Figure 3}}{name=bild3, column=3, span=2, below=bild2, above=bottom}{
+\headerbox{\textsf{Bild 3}}{name=bild3, column=3, span=2, below=bild2, above=bottom}{
 	\vspace{10cm}
-	\centering
+\centering
+
 
 }
 
 
 %%% References %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\headerbox{\textsf{References}}{name=references, column=0, span=3, above=bottom, below=abschnitt4}{
+\headerbox{\textsf{Quellen}}{name=references, column=0, span=3, above=bottom, below=abschnitt4}{
   \begin{small}
   \renewcommand{\refname}{\vspace{-0.8em}}
   \setlength{\parskip}{0cm}

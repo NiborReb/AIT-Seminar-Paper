@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.6.24)  26 JUN 2025 16:43
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.6.24)  26 JUN 2025 17:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -826,20 +826,17 @@ Missing character: There is no ; ("3B) in font nullfont!
 LaTeX Font Info:    Font shape `TU/MyriadPro(2)/b/n' will be
 (Font)              scaled to size 10.68585pt on input line 142.
 Missing character: There is no ; ("3B) in font nullfont!
-
-Package natbib Warning: Citation `einstein' on page 1 undefined on input line 157.
-
 Missing character: There is no ; ("3B) in font nullfont!
 Missing character: There is no ; ("3B) in font nullfont!
 Missing character: There is no ; ("3B) in font nullfont!
 
-Package natbib Warning: Citation `latexcompanion' on page 1 undefined on input line 170.
+Package natbib Warning: Citation `latexcompanion' on page 1 undefined on input line 166.
 
 Missing character: There is no ; ("3B) in font nullfont!
 Missing character: There is no ; ("3B) in font nullfont!
 Missing character: There is no ; ("3B) in font nullfont!
 
-Package natbib Warning: Citation `knuthwebsite' on page 1 undefined on input line 182.
+Package natbib Warning: Citation `knuthwebsite' on page 1 undefined on input line 178.
 
 Missing character: There is no ; ("3B) in font nullfont!
 Missing character: There is no ; ("3B) in font nullfont!
@@ -863,20 +860,20 @@ Missing character: There is no ; ("3B) in font nullfont!
 Missing character: There is no ; ("3B) in font nullfont!
 Missing character: There is no ; ("3B) in font nullfont!
 LaTeX Font Info:    Font shape `TU/MyriadPro(2)/m/n' will be
-(Font)              scaled to size 8.01439pt on input line 225.
+(Font)              scaled to size 8.01439pt on input line 221.
 No file poster.bbl.
 Missing character: There is no ; ("3B) in font nullfont!
 Missing character: There is no ; ("3B) in font nullfont!
 Missing character: There is no ; ("3B) in font nullfont!
 
-Overfull \hbox (1.64268pt too wide) in paragraph at lines 135--227
+Overfull \hbox (1.64268pt too wide) in paragraph at lines 135--223
 [][] [] 
  []
 
 [2
 
 ]
-Memory usage before: 47421&880620; after: 32309&880165; still untouched: 3034373
+Memory usage before: 43557&880298; after: 30317&879843; still untouched: 3038373
 
 Package natbib Warning: There were undefined citations.
 
@@ -887,10 +884,10 @@ L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 20332 strings out of 474878
- 467882 string characters out of 5762516
- 1965627 words of memory out of 5000000
- 41988 multiletter control sequences out of 15000+600000
+ 20334 strings out of 474878
+ 467934 string characters out of 5762516
+ 1961627 words of memory out of 5000000
+ 41990 multiletter control sequences out of 15000+600000
  561227 words of font info for 58 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,8n,122p,485b,1032s stack positions out of 10000i,1000n,20000p,200000b,200000s

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.6.24)  26 JUN 2025 16:23
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.6.24)  26 JUN 2025 16:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -801,6 +801,16 @@ LaTeX Font Info:    Font shape `TU/MyriadPro(2)/b/n' will be
 (Font)              scaled to size 22.15533pt on input line 135.
 LaTeX Font Info:    Font shape `TU/MyriadPro(2)/m/n' will be
 (Font)              scaled to size 12.82301pt on input line 135.
+
+Underfull \hbox (badness 1371) in paragraph at lines 135--135
+[][]\TU/MyriadPro(2)/b/n/24.88 In Silico Model for Tumor Diagnosis Based on
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--135
+
+ []
+
 LaTeX Font Info:    Font shape `TU/MyriadPro(1)/m/n' will be
 (Font)              scaled to size 6.23341pt on input line 135.
 LaTeX Font Info:    Font shape `TU/MyriadPro(1)/m/n' will be
@@ -847,20 +857,20 @@ Missing character: There is no ; ("3B) in font nullfont!
 Missing character: There is no ; ("3B) in font nullfont!
 Missing character: There is no ; ("3B) in font nullfont!
 LaTeX Font Info:    Font shape `TU/MyriadPro(2)/m/n' will be
-(Font)              scaled to size 8.01439pt on input line 232.
+(Font)              scaled to size 8.01439pt on input line 229.
 No file poster.bbl.
 Missing character: There is no ; ("3B) in font nullfont!
 Missing character: There is no ; ("3B) in font nullfont!
 Missing character: There is no ; ("3B) in font nullfont!
 
-Overfull \hbox (1.64268pt too wide) in paragraph at lines 135--234
+Overfull \hbox (1.64268pt too wide) in paragraph at lines 135--231
 [][] [] 
  []
 
 [2
 
 ]
-Memory usage before: 46483&879933; after: 31844&879478; still untouched: 3035373
+Memory usage before: 46651&879957; after: 31924&879502; still untouched: 3035373
 
 Package natbib Warning: There were undefined citations.
 
@@ -871,10 +881,10 @@ L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 20296 strings out of 474878
- 467011 string characters out of 5762516
+ 20300 strings out of 474878
+ 467115 string characters out of 5762516
  1964627 words of memory out of 5000000
- 41956 multiletter control sequences out of 15000+600000
+ 41960 multiletter control sequences out of 15000+600000
  561227 words of font info for 58 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,8n,122p,485b,1032s stack positions out of 10000i,1000n,20000p,200000b,200000s

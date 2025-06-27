@@ -1,6 +1,6 @@
 % !TEX program = xelatex
 % !TEX encoding = UTF-8 Unicode
-% !TEX spellcheck = de_DE
+% !TEX spellcheck = de_US
 
 % --------------------------------------------------------------------------- %
 % Poster template for Institute of Telematics.      						  %
@@ -27,7 +27,7 @@
 \usepackage{natbib}
 \usepackage{setspace}
 \usepackage{uzlcolor}
-\usepackage[ngerman]{babel}
+\usepackage[english]{babel}
 \usepackage{blindtext}
 
 
@@ -145,9 +145,10 @@ BoldItalicFont={Myriad Pro}
 %%% I. Abschnitt %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headerbox{Introduction}{name=abschnitt1, column=0, span=3, row=0, below=headtext}{
 	\vspace{0.5em}
-	
+	\textit{Extracellular Vesicles (EVs)} are a common biomarker to detect tumors. EVs are tiny lipid-bound particles, 30 nm to 5 µm in size, released by cells. By modeling the flow of EVs in tissue and bloodstream in silico, we are now able to derive the progress of a tumors size, even for very small tumors with a size of 50 nm \cite{Zoofaghari_2023}.
 	\begin{itemize}[leftmargin=5.5mm, rightmargin=5.5mm]
-		\item test
+		\item Lack of research in EV transportation through barriers of tissue. 
+		\item The use of in silico models as cost-effective alternatives to in vivo or in vitro experiments is mentioned in both.
 	\end{itemize}
 	\vspace{0.5em}
 }
@@ -156,11 +157,8 @@ BoldItalicFont={Myriad Pro}
 \headerbox{\textsf{System Model}}{name=abschnitt2,column=0, span=3, below=abschnitt1}{
 	\vspace{0.5em}
 	\begin{itemize}[leftmargin=5.5mm, rightmargin=5.5mm]
-		\item Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore \cite{latexcompanion}
-		\item Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-		\item Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-		\item Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-		\item Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+		\item Both describe the same realistic biological scenario with distinct zones: the artery (blood inlet), vein (blood outlet), capillary network (\(\Omega_c)\), tumor area (\(\Omega_t)\), and healthy tissue (\(\Omega_h)\)
+		\item 
 	\end{itemize}
 	\vspace{0.5em}
 }
@@ -172,7 +170,10 @@ BoldItalicFont={Myriad Pro}
 
 \vspace{0.5em}
 	\begin{itemize}[leftmargin=5.5mm, rightmargin=5.5mm]
-		\item \blindtext \cite{knuthwebsite}
+		\item Strong buildup of EVs in tumor regions due to dense tissue structure and lower diffusion rates, leading to significant barriers for capillary access.
+		\item Inverse relationship between tumor size and the rate at which tumor-derived EVs enter the bloodstream. Shown in Figure 3.
+		\item Small tumors (200 µm) release EVs rapidly, peaking at approximately 18 hours
+		\item Larger tumors (600 µm) produce weaker signals, with peak amplitudes reduced by 60\% and slower rise times .
 	\end{itemize}
 		\vspace{0.5em}
 }
@@ -181,7 +182,10 @@ BoldItalicFont={Myriad Pro}
 \headerbox{\textsf{Conclution}}{name=abschnitt4, column=0, span=3, below=abschnitt3}{
 	
 	\vspace{0.5em}
-	\blindtext
+	\begin{itemize}
+		\item In silico framework offers a promising avenue for non-invasive cancer detection using circulating EV profiles, with potential sensitivity down to 50 µm, which is below the threshold of conventional imaging modalities.
+		\item The temporal evolution of EV release is presented as a new diagnostic dimension beyond static imaging, enabling early detection.
+	\end{itemize}
 	\vspace{0.5em}
 }
 
@@ -205,7 +209,6 @@ BoldItalicFont={Myriad Pro}
 \headerbox{\textsf{Figure 3}}{name=bild3, column=3, span=2, below=bild2}{
 	\centering
 		\includegraphics[angle=0,width=0.98\linewidth]{penetration_rate.png}
-
 }
 
 
@@ -215,8 +218,8 @@ BoldItalicFont={Myriad Pro}
   \renewcommand{\refname}{\vspace{-0.8em}}
   \setlength{\parskip}{0cm}
   \setlength{\bibsep}{0cm}
-  \bibliographystyle{unsrt}
-  \bibliography{references}
+  \bibliographystyle{plain}
+  \bibliography{my_bib.bib}
   \end{small}
 }
 

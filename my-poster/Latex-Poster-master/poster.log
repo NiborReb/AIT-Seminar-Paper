@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.6.24)  1 JUL 2025 07:25
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.6.24)  1 JUL 2025 07:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -938,7 +938,7 @@ Overfull \hbox (1.64268pt too wide) in paragraph at lines 136--258
 [2
 
 ]
-Memory usage before: 50030&891061; after: 34305&890579; still untouched: 3032373
+Memory usage before: 50146&891061; after: 34363&890579; still untouched: 3032373
 (./poster.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1

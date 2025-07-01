@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.6.24)  30 JUN 2025 23:34
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.6.24)  1 JUL 2025 07:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -893,21 +893,16 @@ LaTeX Font Info:    Font shape `TU/MyriadPro(2)/m/it' will be
 Missing character: There is no ; ("3B) in font nullfont!
 Missing character: There is no ; ("3B) in font nullfont!
 Missing character: There is no ; ("3B) in font nullfont!
-
-Underfull \hbox (badness 2042) in paragraph at lines 168--168
-[]\TU/MyriadPro(0)/m/n/10 EV Transport: Governed by advection-diffusion with region-specific degradation, flow, and
- []
-
-LaTeX Font Info:    Font shape `TU/MyriadPro(1)/b/n' will be
-(Font)              scaled to size 8.90488pt on input line 168.
-LaTeX Font Info:    Font shape `TU/MyriadPro(1)/b/n' will be
-(Font)              scaled to size 6.23341pt on input line 168.
-LaTeX Font Info:    Font shape `TU/MyriadPro(1)/b/n' will be
-(Font)              scaled to size 4.45244pt on input line 168.
 LaTeX Font Info:    Font shape `TU/MyriadPro(2)/m/n' will be
-(Font)              scaled to size 6.23341pt on input line 168.
+(Font)              scaled to size 6.23341pt on input line 183.
 LaTeX Font Info:    Font shape `TU/MyriadPro(2)/m/n' will be
-(Font)              scaled to size 4.45244pt on input line 168.
+(Font)              scaled to size 4.45244pt on input line 183.
+LaTeX Font Info:    Font shape `TU/MyriadPro(1)/b/n' will be
+(Font)              scaled to size 8.90488pt on input line 183.
+LaTeX Font Info:    Font shape `TU/MyriadPro(1)/b/n' will be
+(Font)              scaled to size 6.23341pt on input line 183.
+LaTeX Font Info:    Font shape `TU/MyriadPro(1)/b/n' will be
+(Font)              scaled to size 4.45244pt on input line 183.
 Missing character: There is no ; ("3B) in font nullfont!
 Missing character: There is no ; ("3B) in font nullfont!
 Missing character: There is no ; ("3B) in font nullfont!
@@ -936,14 +931,14 @@ Missing character: There is no ; ("3B) in font nullfont!
 Missing character: There is no ; ("3B) in font nullfont!
 Missing character: There is no ; ("3B) in font nullfont!
 
-Overfull \hbox (1.64268pt too wide) in paragraph at lines 136--239
+Overfull \hbox (1.64268pt too wide) in paragraph at lines 136--258
 [][] [] 
  []
 
 [2
 
 ]
-Memory usage before: 47894&891024; after: 33157&890509; still untouched: 3034373
+Memory usage before: 50030&891061; after: 34305&890579; still untouched: 3032373
 (./poster.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -951,12 +946,12 @@ L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 20968 strings out of 474878
- 475985 string characters out of 5762516
- 1965627 words of memory out of 5000000
- 42610 multiletter control sequences out of 15000+600000
+ 20973 strings out of 474878
+ 476083 string characters out of 5762516
+ 1967627 words of memory out of 5000000
+ 42615 multiletter control sequences out of 15000+600000
  561681 words of font info for 60 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 117i,9n,122p,485b,1031s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,9n,122p,522b,1031s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on poster.pdf (1 page).

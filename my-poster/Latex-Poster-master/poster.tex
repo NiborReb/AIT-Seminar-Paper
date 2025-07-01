@@ -146,10 +146,10 @@ BoldItalicFont={Myriad Pro}
 %%% I. Abschnitt %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headerbox{Introduction}{name=abschnitt1, column=0, span=3, row=0, below=headtext}{
 	\vspace{0.5em}
-	\textit{Extracellular Vesicles (EVs)} are a common biomarker to detect tumors. EVs are tiny lipid-bound particles, 30 nm to 5 µm in size, released by cells. By modeling the flow of EVs in tissue and bloodstream in silico, we are now able to derive the progress of a tumors size, even for very small tumors with a size of 50 µm \cite{}. In comparison – human hair is up to 100 µm.
+	\textit{Extracellular Vesicles (EVs)} are a common biomarker to detect tumors \cite{Doyle}. EVs are tiny lipid-bound particles, 30 nm to 5 µm in size, released by cells into the extracellular space \cite{Doyle}. By modeling the flow of EVs in tissue and bloodstream in silico, we are able to derive the progress of a tumors size, even for very small tumors with a size of 50 µm \cite{Zoofaghari}. In comparison – human hair is up to 100 µm.
 	\begin{itemize}[leftmargin=5.5mm, rightmargin=5.5mm]
 		\item Lack of research in EV transportation through barriers of tissue. 
-		\item The use of in silico models as cost-effective alternatives to in vivo or in vitro experiments is mentioned in both.
+		\item The use of in silico models as cost-effective alternatives to in vivo or in vitro experiments.
 	\end{itemize}
 	\vspace{0.5em}
 }
@@ -158,10 +158,25 @@ BoldItalicFont={Myriad Pro}
 \headerbox{\textsf{System Model}}{name=abschnitt2,column=0, span=3, below=abschnitt1}{
 	\vspace{0.5em}
 	\begin{itemize}[leftmargin=5.5mm, rightmargin=5.5mm]
-		\item Realistic biological scenario with distinct zones: the artery, vein, capillary network (\(\Omega_c)\), tumor area (\(\Omega_t)\), and healthy tissue (\(\Omega_h)\)
-		\item EV Transport: Governed by advection-diffusion with region-specific degradation, flow, and diffusion. Blood velocity from Navier-Stokes drives EV drift in capillaries.
-		\item Exchange Dynamics: EVs cross interfaces via: \[\hat{n} \cdot \mathbf{J}_{t(h)} = k_p (c_{t(h)} - c_c), \quad c_h = k_t c_t,\] where $k_p$ and $k_t$ define permeability and partitioning.
-		\item \textsf{Output:} EV flux into the bloodstream is quantified by:
+		\item Realistic model with distinct zones: the artery, vein, capillary network (\(\Omega_c)\), tumor area (\(\Omega_t)\), and healthy tissue (\(\Omega_h)\)
+		\item Several core equations, that define how EVs behave 
+		\begin{enumerate}
+			\item Penetration rate: Release of EVs to the blood  
+			\item Boundary conditions: 
+			\begin{itemize}
+				\item Capillary-tissue interface
+				\item Tumor-healthy-tissue interface
+				\item Partially absorbing condition
+			\end{itemize}
+			\item Dynamic equations
+			\begin{itemize}
+				\item Advection-Diffusion-Equations
+				\item Navier-Stokes-Gleichungen
+
+			\end{itemize}
+			
+		\end{enumerate}
+		\item \textsf{Diagnostic metric:} EV flux into the bloodstream is quantified by:
     	\[R_s = \iint_{\text{VCS}} c(\mathbf{r}, t)\, u_n(\mathbf{r}, t)\, ds\]indicating tumor presence and size via bloodstream EV concentration.
 	\end{itemize}
 	\vspace{0.5em}
@@ -174,10 +189,10 @@ BoldItalicFont={Myriad Pro}
 
 \vspace{0.5em}
 	\begin{itemize}[leftmargin=5.5mm, rightmargin=5.5mm]
-		\item For the modeling computational modeling, COSMOL Multiphysics was used. 
+		\item COSMOL Multiphysics was used for the computational modeling
 		\item Strong buildup of EVs in tumor regions due to dense tissue structure and lower diffusion rates, leading to significant barriers for capillary access.
 		\item Inverse relationship between tumor size and the rate at which tumor-derived EVs enter the bloodstream. Shown in Figure 3.
-		\item Small tumors (200 µm) release EVs rapidly, peaking at approximately 18 hours
+		\item Small tumors (200 µm) release EVs rapidly
 		\item Larger tumors (600 µm) produce weaker signals, with peak amplitudes reduced by 60\% and slower rise times.
 	\end{itemize}
 		\vspace{0.5em}
@@ -188,10 +203,9 @@ BoldItalicFont={Myriad Pro}
 	
 	\vspace{0.5em}
 	\begin{itemize}
-		\item In silico framework offers a promising avenue for non-invasive cancer detection using circulating EV profiles, with potential sensitivity down to 50 µm, which is below the threshold of conventional imaging modalities.
+		\item This in silico framework offers a promising way for non-invasive cancer detection using circulating EV profiles, with potential sensitivity down to 50 µm, which is below the threshold of conventional imaging modalities.
 		\item The temporal evolution of EV release is presented as a new diagnostic dimension beyond static imaging, enabling early detection.
-		\item In future work, different EV sizes should be considered
-		\item 
+		\item In future work, different EV sizes should be considered. Also in vivo and in vitro studies are needed to validate the results.
 	\end{itemize}
 	\vspace{0.5em}
 }
@@ -200,31 +214,31 @@ BoldItalicFont={Myriad Pro}
 %%% Bild 1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headerbox{\textsf{Figure 1}}{name=bild1, column=3, span=2, below=headtext}{
 	\centering
-	\vspace{1.0em}
+	\vspace{1.5em}
 	\includegraphics[angle=0,width=0.98\linewidth]{schematics.png}
-	\vspace{1.0em}
+	\vspace{1.5em}
 }
 
 
 %%% Bild 2 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headerbox{\textsf{Figure 2}}{name=bild2,column=3, span=2, below=bild1}{
 	\centering
-	\vspace{1.0em}
+	\vspace{1.5em}
 	\includegraphics[angle=0,width=0.98\linewidth]{tumor_sizes.png}
-	\vspace{1.0em}
+	\vspace{1.5em}
 }
 
 
 %%% Bild 3 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headerbox{\textsf{Figure 3}}{name=bild3, column=3, span=2, below=bild2}{
 	\centering
-	\vspace{1.0em}
+	\vspace{1.4em}
 	\includegraphics[angle=0,width=0.98\linewidth]{penetration_rate.png}
-	\vspace{1.0em}
+	\vspace{1.4em}
 }
 
 %%% References %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\headerbox{\textsf{Quellen}}{name=references, column=0, span=5, above=bottom, below=abschnitt4, below=bild3}{
+\headerbox{\textsf{Quellen}}{name=references, column=0, span=5, above=bottom, below=abschnitt4}{
 %\smaller										% Make the whole text smaller
 \vspace{1.0em} 								% Save some space at the beginning
 \bibliographystyle{plain}						% Use plain style
@@ -232,7 +246,12 @@ BoldItalicFont={Myriad Pro}
 \begin{thebibliography}{1}						% Simple bibliography with widest label of 1
 \itemsep=-0.01em								% Save space between the separation
 \setlength{\baselineskip}{0.4em}				% Save space with longer lines
-\bibitem{prevWork1} Laszlo Gulyas, Richard Legendi: \emph{Effects of Sample Duration on Network Statistics in Elementary Models of Dynamic Networks}, International Conference on Computational Science, Singapore (2011) 
+
+\bibitem{Doyle} Doyle, L. and Wang, M. 2019. Overview of Extracellular Vesicles, Their Origin, Composition, Purpose, and Methods for Exosome Isolation and Analysis. Cells. 8, 7 (Jul. 2019), 727. DOI: https://doi.org/10.3390/cells8070727.
+\vspace{0.5em}
+\bibitem{Zoofaghari} Zoofaghari, M. et al. 2023. In Silico Model for Tumor Diagnosis based on Bloodstream Penetrating Extracellular Vesicles. Proceedings of the 10th ACM International Conference on Nanoscale Computing and Communication. (Sep. 2023), 129–135. DOI: https://doi.org/10.1145/3576781.3608719.
+\vspace{0.5em}
+
 \end{thebibliography}
 }
 
@@ -240,3 +259,4 @@ BoldItalicFont={Myriad Pro}
 
 \end{document}
 
+\bibitem{Doyle} Doyle, L. and Wang, M. 2019. Overview of Extracellular Vesicles, Their Origin, Composition, Purpose, and Methods for Exosome Isolation and Analysis. Cells. 8, 7 (Jul. 2019), 727. DOI: https://doi.org/10.3390/cells8070727.
